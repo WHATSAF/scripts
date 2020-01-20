@@ -1,0 +1,84 @@
+.navbar {
+    background: #2b3749;
+}
+
+.navbar-nav>.nav-item {
+    position: relative;
+}
+
+.navbar .nav-link {
+    position: relative;
+    height: 74px;
+    line-height: 74px;
+    padding: 0 15px;
+    font-size: 20px;
+}
+
+.navbar .nav-link .fa {
+    color: #00b5f1;
+}
+
+.navbar .badge {
+    position: absolute;
+    padding: .25em;
+    right: 0;
+    top: 15px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.navbar .splitter {
+    background: #414e61;
+    width: 1px;
+    height: 18px;
+    display: inline-block;
+}
+
+.content-wrapper {
+    padding-bottom: 50px;
+    background: #354052;
+}
+
+.side-bar {
+    width: 250px;
+    float: left;
+}
+
+.content {
+    background: #e9ecf3;
+    min-height: 810px;
+    margin-left: 250px;
+    padding: 10px 0 0 20px;
+}
+
+.admin-menu-dropdown {
+    position: absolute;
+    right: 0;
+    min-width: 0;
+    margin: 0;
+    background: #2b3749;
+    border: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.admin-menu-dropdown>.dropdown-item {
+    color: white;
+    padding: .5rem 1.5rem;
+}
+
+.admin-menu-dropdown>.dropdown-item:hover {
+    background: #e9ecf3;
+    color: #3e5e92;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    font-size: 14px;
+    background: #2c3848;
+    color: #fff;
+}

@@ -1,0 +1,25 @@
+.msg-container{
+    position: fixed;
+    z-index: 999;
+    left: 50%;
+    top: 50%;
+    line-height: 20px;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transition: opacity 1s ease-in;
+    -webkit-transition: opacity 1s ease;
+    -moz-transition: opacity 1s ease;
+    -o-transition: opacity 1s ease;
+}
+
+.msg-content{
+    color: white;
+    background: black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+    text-align: center;
+}

@@ -1,0 +1,46 @@
+.navbar {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .8);
+    transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+}
+
+.navbar:hover {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .8);
+}
+
+.navbar-nav .nav-item>.nav-link {
+    font-size: 1.4rem;
+    transition: all .1s ease-in-out;
+    -moz-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+}
+
+.navbar-nav .nav-item.active>.nav-link {
+    font-size: 1.6rem;
+}
+
+.navbar-nav .nav-item>.nav-link:hover {
+    font-size: 1.6rem;
+}
+
+.navbar-brand img {
+    width: 48px;
+    height: 48px;
+}
+
+.container-fluid {
+    margin-top: 6rem;
+}
+
+.nav-pills {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+    left: 12rem;
+    transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+}
+
+.nav-pills:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, .5);
+}

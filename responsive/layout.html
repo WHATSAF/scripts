@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>layout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap-4/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="styles/layout.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <a class="navbar-brand py-0" href="javascript:void(0)">
+            <img src="images/karasu.png" />
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="navContent">
+            <span class="navbar-toggle-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navContent">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link px-3 py-0">链接1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3 py-0">链接2</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link px-3 py-0" href="javascript:void(0)">面板</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3 py-0" href="javascript:void(0)">系统</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3 py-0">链接3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3 py-0">链接4</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2">
+                <div class="nav nav-pills flex-column position-fixed rounded border p-1">
+                    <a class="nav-link active" href="javascript:void(0)">链接1</a>
+                    <a class="nav-link" href="javascript:void(0)">链接2</a>
+                    <a class="nav-link" href="javascript:void(0)">链接3</a>
+                    <a class="nav-link" href="javascript:void(0)">链接4</a>
+                </div>
+            </div>
+            <div class="col-8">
+                测试团队现状
+                这个部门人员朝气蓬勃，个人认为更像一个创业型的公司，初期技术资源都投入到产品功能需求开发中，对于产品质量稍作妥协，不需要太严格的过程控制和质量把控，相比开发资源而言，测试的投入资源不是那么急需。
+
+                随着用户量的上升，各种类型的移动设备问题错综复杂，用户对产品的质量有要求，部门老大对质量越来越重视，狠抓这块，从 2017 年 Q4、2018 年 Q1
+                分别招入两批测试人员，整个技术团队对于质量把控的诉求越来越强烈了，到后来整个测试团队跟随开发团队的规模壮大而壮大起来了。
+
+                测试技能现状
+                所有产品线的测试手段都是以手工测试为主，自动化辅助手段较少，回归测试成本高，Android、iOS 独占测试人员忙于业务的功能性需求的黑盒测试，非功能性需求无法满足。
+
+                Android、iOS 与后端 Server 进行数据交互的 API 规范定义是一致的，早期无相关测试人员参与，导致发现 API 问题较晚，推迟到客户端功能开发完成阶段才进行检验，同时也造成后端 API
+                回归成本高；
+
+                功能测试以及 API
+                相关测试在研发测试过程走一轮、预发布环境第二轮、生产环境走第三轮，深度依赖于手工测试，发现问题滞后，相比需求、研发阶段修复的成本来说，发现的阶段越晚修复成本越高，最终可能导致带着严重问题上线运营。
+
+                测试流程现状
+                交付式测试，开发人员把相关功能任务设置为 done
+                之后交付给测试人员，测试人员未全程参与从需求源头开始跟进（及时了解需求背景和细节，消除需求含混性，及早开展测试用例编写工作），从而研发过程中客户端功能、后端 API
+                的可测试性（一个完整的功能是可以分多个功能小点提测，最终完整再提测一次）无法提高，测试人员也无法及早进行冒烟测试；
+
+                无测试人员专属的持续集成构建环境，Android、iOS 打包依赖开发，测试人员存在时间等待上的开销成本一直存在未能降低。
+
+                测试三轮验证：测试环境验证第一次、预发布验证第二次、生产验证第三次，为什么做三轮，这三轮的评估依据是什么？
+
+                整个测试过程，只有测试人员参与，产品、客户端开发同学的协助如何提升融入进来呢？
+
+                测试任务评估没有依据
+                针对需求的相关测试任务，出牌评估工时，没有评估依据，直接拍脑袋进行，体现在：这个需求需要测试哪些方面？涉及客户端 Android、iOS
+                哪些特性？有哪些兼容性需要测试？只有把所有相关点列出来，评估完整的时间，再进行合理的取舍，让质量维度维持在一个可接受的平衡点，而不是一味追求最高质量，往往很多时候，利用现有资源做最平衡的质量优化，可接受的容忍度。
+                负责客户端的测试人员承担产品职责单一，技术要求多层次
+                最初测试人力资源不足，为了提高更大的复用率，要求每位测试人员负责客户端 Android、iOS 的两端的测试工作，编写一份基础用例，根据每端特性在测试过程中再改变策略，落地实施的第一个季度就暴露出问题：
+
+                同时兼顾一个产品多个功能的测试任务，对于客户端开发同学而言，他们是并行工作的，而测试同学需要在不同功能的 Android、iOS 两端来回切换，导致效率低；
+                同样问题也存在兼顾多个产品的测试任务，有些产品是同时进行的，需要在多个产品的任务中切换，导致对两个产品都不熟悉；
+                测试设备占用时间严重，在进行 Android、iOS 轮换切换的场景中，一人独占相关设备；
+                改进：单一职责，专职专责，原则上不再进行跨项目的版本任务，也不在版本中负责一个功能的 Android、iOS 相关测试任务（除了运营的相关活动项目可以兼顾 Android、iOS 测试），主攻
+                Android、iOS
+                单一方向的功能测试、自动化测试，说的高大上一点好像成了全栈测试工程师。
+
+                实施半年之后，收益颇深，各自负责 Android、iOS 的测试同学结对编写测试用例，抽取共性部分，运行时附加个性化的系统特性，并行测试效率提高，设备占用率降低。
+
+                自研的 API 管理和测试平台
+                过去后端的 API 规范是通过 word
+                文档进行管理，版本变更是需要手动通知相应人员，而且每个人编写的格式不统一，容易造成冲突，解决上有时间开销，另外修改跟踪反馈上的成本很高，开源项目中也没有能够适合交友团队模式的工具，因此投入开发
+                API 管理和测试平台。
+
+                考虑到客户端与后端交互是通过 API 进行，将 API 平台化管理带来效益：
+
+                使用平台化管理清晰呈现 MobileAPI 接口分布图，有效减轻了后端同学管理接口规范的工作 ;
+                方便客户端同学快速查阅和版本对比 ;
+                API 修改历史记录对比，修改后第一时间系统自动通知相关人员 ;
+                在接口定义完之后，可直接生成 API Mock，节约手工写 mock 接口的时间，客户端同学可以直接开始开发工作，与后端开发并行 ;
+            </div>
+        </div>
+    </div>
+
+    <script src="lib/jquery/jquery-3.3.1.min.js"></script>
+    <script src="lib/bootstrap-4/js/bootstrap.min.js"></script>
+</body>
+
+</html>
