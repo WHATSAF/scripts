@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="tree.css" />
+</head>
+
+<body>
+    <div id="tree_container"></div>
+
+    <div>
+        <button type="button" onclick="getChecked()">获取</button>
+    </div>
+
+    <script src="jquery.min.js"></script>
+    <script src="tree.js"></script>
+
+    <script>
+        var tree;
+        $(function () {
+            tree = $('#tree_container').tree([{
+                txt: "深圳市人们来访接待厅",
+                isExpand: true,
+                children: [{
+                    txt: "协化一处",
+                    isExpand: true,
+                    children: [{
+                        txt: "张三",
+                        val: "1",
+                        isCheckBox: true,
+                        isChecked: true
+                    }, {
+                        txt: "李四",
+                        val: "2",
+                        isCheckBox: true,
+                        isChecked: false
+                    }]
+                }, {
+                    txt: "协化二处"
+                }, {
+                    txt: "协化三处"
+                }]
+            }]);
+        })
+
+        function getChecked() {
+            console.log(JSON.stringify(tree.getAllChecked()));
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+.tree {
+    list-style: none;
+    text-align: left;
+    padding   : 0 15px;
+}
+
+.tree .tree {
+    border-left: dotted 1px #000;
+}
+
+.tree li>.tree {
+    display: none;
+}
+
+.tree li.on>.tree {
+    display: block;
+}
+
+.tree .toggler {
+    margin-left: -3px;
+    display    : inline-block;
+    min-width  : 15px;
+}
+
+.tree a,
+.modal .tree label {
+    display    : inline-block;
+    line-height: 1.5;
+    color      : #333;
+    font-weight: normal;
+}
+
+.tree label {
+    line-height: 2;
+}
